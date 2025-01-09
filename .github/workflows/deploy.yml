@@ -1,0 +1,31 @@
+name: Deploy MkDocs site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # You can specify any branch you want to deploy from
+  pull_request:
+    branches:
+      - main  # Same for pull requests if you want them to trigger the deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-terminal
+
+      - name: Deploy site with MkDocs
+        run: |
+          mkdocs gh-deploy --clean

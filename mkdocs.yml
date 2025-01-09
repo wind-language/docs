@@ -1,0 +1,13 @@
+site_name: Wind Programming Language
+nav:
+  - Home: 'index.md'
+  - Troubleshooting: 'help.md'
+
+theme:
+  name: terminal
+  palette: gruvbox_dark
+
+plugins:
+  - search
+
+remote_branch: docs-site
