@@ -8,7 +8,6 @@ on:
     branches:
       - docs  # Replace with the branch you are working on
 
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
