@@ -3,10 +3,10 @@ name: Deploy MkDocs site to GitHub Pages
 on:
   push:
     branches:
-      - main  # You can specify any branch you want to deploy from
+      - docs
   pull_request:
     branches:
-      - main  # Same for pull requests if you want them to trigger the deploy
+      - docs
 
 jobs:
   deploy:
