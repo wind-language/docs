@@ -1,5 +1,6 @@
 site_dir: docs-site
 site_name: Wind Programming Language
+use_directory_urls: false
 nav:
   - Home: 'index.md'
   - Troubleshooting: 'help.md'
@@ -13,3 +14,8 @@ plugins:
   - search
 
 remote_branch: docs-site
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/utcq/wind

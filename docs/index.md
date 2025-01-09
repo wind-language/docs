@@ -15,7 +15,7 @@ Wind is a powerful, lightweight, and efficient programming language designed to 
 ## Key Features
 
 - **Low-Level Control**: Directly manage memory and resources for optimal performance.
-- **Safe from overflows**: Prevent memory overflows and leaks with built-in safety features.
+- **Safe from overflows**: Prevent integer overflows and memory leaks with built-in safety features.
 
 ## Getting Started
 
