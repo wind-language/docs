@@ -4,7 +4,7 @@ site_url: https://utcq.github.io/wind/
 use_directory_urls: true
 nav:
   - Home: 'index.md'
-  - Getting Started: '/#getting-started'
+  - Getting Started: 'learn/quick.md'
   - Troubleshooting: 'help.md'
 
 theme:
