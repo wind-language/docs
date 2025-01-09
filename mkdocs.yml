@@ -1,6 +1,7 @@
 site_dir: docs-site
 site_name: Wind Programming Language
-use_directory_urls: false
+site_url: https://utcq.github.io/wind/
+use_directory_urls: true
 nav:
   - Home: 'index.md'
   - Getting Started: '/#getting-started'
