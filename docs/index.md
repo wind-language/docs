@@ -23,7 +23,7 @@ To get started with Wind, follow these steps:
 
 1. **Install the Compiler**: [Installation Guide](install.md)
 2. **Hello, World!**: Learn how to write your first Wind program with our [Quick Start Guide](./learn/quick.md).
-3. **Compiler Documentation**: Dive deeper into how the Wind compiler works with the [Compiler Docs](compiler.md).
+3. **Compiler Documentation**: Dive deeper into how the Wind compiler works with the [Compiler Docs](./compiler.md).
 
 ## Documentation Navigation
 
