@@ -1,3 +1,4 @@
+site_dir: docs-site
 site_name: Wind Programming Language
 nav:
   - Home: 'index.md'
