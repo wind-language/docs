@@ -21,16 +21,10 @@ Wind is a powerful, lightweight, and efficient programming language designed to 
 
 To get started with Wind, follow these steps:
 
-1. **Install the Compiler**: [Installation Guide](install.md)
-2. **Hello, World!**: Learn how to write your first Wind program with our [Quick Start Guide](./learn/quick.md).
-3. **Compiler Documentation**: Dive deeper into how the Wind compiler works with the [Compiler Docs](./compiler.md).
-
-## Documentation Navigation
-
-- **[Language Reference](language.md)**: Comprehensive guide to the Wind syntax and semantics.
-- **[Standard Library](library.md)**: Learn about the built-in functions and libraries that power your Wind programs.
-- **[Tutorials](tutorials.md)**: Step-by-step guides on using Wind for real-world projects.
-- **[Troubleshooting](troubleshooting.md)**: Solutions to common issues you might encounter while using Wind.
+1. **Install the Compiler**: [Installation Guide](./learn/install.md)
+2. **Hello, World!**: Learn how to write your first Wind program with the [Quick Start Guide](./learn/quick.md).
+3. **Compiler Documentation**: Dive deeper into how the Wind compiler works with the [Compiler Docs](./learn/compiler.md).
+4. **Syntax Reference**: Explore the Wind syntax with the [Language Reference](./learn/syntax.md).
 
 ## Examples
 
@@ -39,19 +33,21 @@ Take a look at some code examples to get a feel for how Wind works:
 - **Basic Syntax Example**: Learn how to write a simple program.
 - **Advanced Performance Example**: See how Wind performs in low-level operations.
 
+## About & Contributing
+
+[Learn More About Wind](about.md)
+
 ## Community
 
 Join the Wind community and contribute to the language's growth:
 
 - [GitHub Repository](https://github.com/utcq/wind)
-[comment]: <> ( - [Discord Server](https://discord.gg/windlang) )
+- [Discord Server](https://discord.gg/ws7Rhb77kK)
 
 ## Support
 
-If you run into any issues, check out our [Troubleshooting Guide](troubleshooting.md) or reach out to the community.
+If you run into any issues, check out the [Troubleshooting Guide](help.md) or reach out to the community.
 
 ---
 
-**Developed with ❤️ by the utcq**
-
-[Learn More About Wind](about.md)
+**Developed with ❤️ by utcq**

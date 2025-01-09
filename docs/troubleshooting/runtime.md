@@ -22,14 +22,4 @@ Here, `RUNTIME_PATH` refers to the path where you want to output the compiled ru
 
 ## Related Links:
 - [Wind Documentation](../index.md)
-- [CMake Installation Instructions](link-to-cmake-installation-guide)
-
----
-
-### Explanation of the Page:
-
-- **Header**: Provides the title of the page.
-- **Issue**: Describes the error message and the context in which it occurs.
-- **Solution**: Provides two solutions: reinstalling the compiler or manually compiling the runtime.
-- **Additional Information**: Gives more context and troubleshooting steps if the user is still facing issues.
-- **Related Links**: Links to relevant documentation for users to explore more about Wind, CMake, or other relevant topics.
+- [Installation Guide](../learn/install.md)
