@@ -3,6 +3,7 @@ site_name: Wind Programming Language
 nav:
   - Home: 'index.md'
   - Troubleshooting: 'help.md'
+  - Getting Started: 'learn/quick.md'
 
 theme:
   name: terminal
