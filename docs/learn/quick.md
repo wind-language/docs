@@ -9,6 +9,7 @@ Before you begin, make sure you have the following:
 - A **Linux** or **macOS** system.
 - Basic knowledge of programming concepts.
 - A terminal and a text editor.
+- [Wind installed](./install.md) on your system.
 
 ---
 
