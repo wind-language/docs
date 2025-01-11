@@ -1,6 +1,8 @@
 site_dir: docs-site
 site_name: Wind Programming Language
-site_url: https://utcq.github.io/wind/
+site_url: https://wind-lang.me
+site_description: Wind, designed for safety, simplicity, and performance.
+site_author: utcq
 use_directory_urls: true
 nav:
   - Home: 'index.md'
