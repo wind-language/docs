@@ -28,7 +28,7 @@ jobs:
       
       - name: Download installer
         run: |
-          curl https://raw.githubusercontent.com/utcq/wind/refs/heads/main/utils/installer.sh >> docs/setup.sh
+          wget https://raw.githubusercontent.com/utcq/wind/refs/heads/main/utils/installer.sh -O docs/setup.sh
 
       - name: Build and Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
