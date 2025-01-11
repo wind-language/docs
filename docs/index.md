@@ -25,6 +25,7 @@ To get started with Wind, follow these steps:
 2. **Hello, World!**: Learn how to write your first Wind program with the [Quick Start Guide](./learn/quick.md).
 3. **Compiler Documentation**: Dive deeper into how the Wind compiler works with the [Compiler Docs](./learn/compiler.md).
 4. **Syntax Reference**: Explore the Wind syntax with the [Language Reference](./learn/syntax.md).
+5. **Advanced Examples**: Check out some [advanced examples](./learn/advanced.md) to see what Wind is capable of.
 
 ## Examples
 

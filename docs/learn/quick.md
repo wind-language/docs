@@ -64,6 +64,7 @@ Congratulations! You’ve just written and executed your first Wind program!
 ## Step 4: Need Help?
 
 - [Syntax](./syntax.md): Learn more about the syntax of Wind.
+- [Advanced Examples](./advanced.md): Explore advanced examples to see what Wind is capable of.
 - [Troubleshooting](../help.md): Solutions to common issues you might face.
 
 ---
