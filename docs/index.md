@@ -3,7 +3,7 @@
 <head>
 <meta property="og:title" content="Wind Programming Language">
 <meta property="og:description" content="Wind, designed for safety, simplicity, and performance.">
-<meta property="og:url" content="https://wind-lang.me">
+<meta property="og:url" content="https://doc.wind-lang.me">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wind Programming Language">

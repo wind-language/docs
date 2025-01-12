@@ -14,7 +14,7 @@ Currently the Wind compiler is only supported on **Linux** and **macOS** systems
 ## Installer Script
 
 ```bash
-curl -L https://wind-lang.me/setup.sh | bash
+curl -L https://wind-lang.me/setup | bash
 ```
 
 ---
