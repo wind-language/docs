@@ -214,12 +214,10 @@ branch [
 The `loop` keyword is used to define a loop statement.
 
 ```wind
-loop [
-   x < 10: {
-      puts("x is less than 10");
-      x++;
-   }
-]
+loop [x < 10] {
+   puts("x is less than 10");
+   x++;
+}
 ```
 
 There's no `for` loop in Wind, but you can use the `loop` keyword with a counter.
@@ -231,12 +229,10 @@ There's no `for` loop in Wind, but you can use the `loop` keyword with a counter
 The `continue` keyword is used to skip the current iteration of a loop.
 
 ```wind
-loop [
-   x < 10: {
-      x++;
-      continue;
-   }
-]
+loop [x < 10] {
+   x++;
+   continue;
+}
 ```
 
 ### Break
@@ -244,12 +240,10 @@ loop [
 The `break` keyword is used to exit a loop.
 
 ```wind
-loop [
-   x < 10: {
-      x++;
-      break;
-   }
-]
+loop [x < 10] {
+   x++;
+   break;
+}
 ```
 
 ---
