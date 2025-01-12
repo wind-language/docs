@@ -39,5 +39,7 @@ Now the wind compiler is installed in build/bin directory as `windc`.
 
 Make sure to keep the source intact for the compiler to work properly.
 
-Currently wind does not have an installer so the runtime libraries are expected to be in the source directory.
-
+To change runtime and std path you can use CMAKE flags:
+```bash
+cmake .. -DWIND_RUNTIME_PATH=/path/to/runtime -DWIND_STD_PATH=/path/to/std
+```
