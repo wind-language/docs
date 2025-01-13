@@ -47,6 +47,41 @@ Multi include is also supported.
 
 ---
 
+### import
+
+Pay attention to the `import` directive.
+
+```wind
+@import "#my_module"
+```
+
+You can use # prefix here as well to include a module from the `WIND_PKGS_PATH`.
+Import searches for a dir like this:
+
+```yml
+name/
+   name.wi
+   name.w
+```
+
+The `name.wi` file is the interface file, and the `name.w` file is the implementation file.
+The interface file should contain the function prototypes, and the implementation file should contain the function definitions.
+
+Interface file example:
+```wind
+func test_fn(x: int): int;
+```
+
+Implementation file example:
+```wind
+func test_fn(x: int): int {
+   return x*(x+1);
+}
+```
+
+---
+
+
 ### pure
 
 The `pure` directive is used to define a function flag.
@@ -108,6 +143,9 @@ loop
 continue
 break
 asm
+true
+false
+Null
 ```
 
 ---
@@ -140,6 +178,27 @@ uint64 = unsigned 64 bits
 bool = 8 bits
 char = 8 bits
 ```
+
+Arrays are declared using the following syntax:
+
+```wind
+var arr: [int; 10];
+```
+
+Pointers are declared using the following syntax:
+
+```wind
+var ptr: ptr<int>;
+```
+
+Wind convention is to use heap allocation over stack allocated arrays.
+
+with the `guard![]` directive, you can check for null pointers and prevent dereferencing.
+
+```wind
+var my_ptr: ptr<char> = guard![malloc(32)];
+```
+
 
 ---
 

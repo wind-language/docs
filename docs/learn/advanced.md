@@ -48,3 +48,30 @@ func main(): int {
 - `user_i * user_i`:
     
     _Integer overflow? Not a chance! Every unsafe arithmetic operation is checked for overflow._
+
+## Pointers and References
+
+Here's an example of how you can use pointers and references in Wind to create safe and efficient code.
+
+```wind
+@include[
+    "#libc.w"
+]
+
+func get_ptr(): ptr<int> {
+    var buff: ptr<int> = guard![malloc(32*900000000)];
+    return buff;
+}
+
+func main(): int {
+    var buff: ptr<int> = get_ptr();
+    printf("Buff: %p\n", buff);
+    return 0;
+}
+```
+
+### Protection breakdown
+
+- `malloc(32*900000000)`:
+
+    _Null pointers? Not here! The `guard![]` directive will check for null pointers and prevent dereferencing._
