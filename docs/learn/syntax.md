@@ -225,6 +225,16 @@ cast<ptr<char>>(x)[0]='x';
 
 ---
 
+### Sizeof
+
+The `sizeof<>` directive is used to get the (move) size of a type.
+
+```wind
+var size_int: int = sizeof<int>;
+```
+
+---
+
 ## Variables
 
 Variables in Wind are declared using the `var` keyword, followed by the variable name and type.
