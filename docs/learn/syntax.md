@@ -33,7 +33,7 @@ The `include` directive is used to include a file in the current file. The file 
 Using # as the first character of the file path will include a file from the standard library.
 
 ```wind
-@include "#types.w"
+@include "#types.wi"
 ```
 
 Multi include is also supported.
@@ -173,7 +173,7 @@ unsigned byte = unsigned 8 bits
 ...
 ```
 
-But the "#types.w" std file provides some more types:
+But the "#types.wi" std file provides some more types:
 ```c
 int8 = signed 8 bits
 int16 = signed 16 bits

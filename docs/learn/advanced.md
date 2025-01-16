@@ -17,7 +17,7 @@ Here's an example of how you can run read/write data from the user without havin
 
 ```wind
 @include[
-    "#libc.w"
+    "#libc.wi"
 ]
 
 func main(): int {
@@ -56,7 +56,7 @@ Here's an example of how you can use pointers and references in Wind to create s
 
 ```wind
 @include[
-    "#libc.w"
+    "#libc.wi"
 ]
 
 func get_ptr(): ptr<int> {

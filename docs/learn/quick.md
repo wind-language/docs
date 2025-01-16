@@ -18,7 +18,7 @@ Before you begin, make sure you have the following:
 Once Wind is installed, create your first Wind program. Open your favorite text editor and write the following:
 
 ```wind
-@include "#libc.w"
+@include "#libc.wi"
 
 func main(): int {
     puts("Hello, Wind!");
