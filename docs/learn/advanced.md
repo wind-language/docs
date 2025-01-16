@@ -7,6 +7,7 @@ Welcome to the Wind advanced examples! Here you'll find a collection of advanced
 ## Table of Contents
 
 - [Memory Management](#memory-management)
+- [Pointers and References](#pointers-and-references)
 
 ---
 
