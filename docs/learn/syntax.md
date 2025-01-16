@@ -128,6 +128,16 @@ The `type` directive is used to define a type.
 
 ---
 
+### linkflag
+
+The `linkflag` directive is used to define an ld flag.
+
+```wind
+@linkflag("-lm);
+```
+
+---
+
 ## Keywords
 
 Wind has no concept of reserved-identifiers, so you can use any keyword as an identifier if you wish. However, the following keywords are used in the language and should be avoided as identifiers:
@@ -185,6 +195,8 @@ Arrays are declared using the following syntax:
 var arr: [int; 10];
 ```
 
+### Pointers
+
 Pointers are declared using the following syntax:
 
 ```wind
@@ -199,6 +211,17 @@ with the `guard![]` directive, you can check for null pointers and prevent deref
 var my_ptr: ptr<char> = guard![malloc(32)];
 ```
 
+---
+
+### Casting
+
+Casting in Wind is done with the directive `cast<>()`
+(Will be replaced with `as` in the future)
+
+```wind
+var x: ptr<uint64> = malloc(...);
+cast<ptr<char>>(x)[0]='x';
+```
 
 ---
 
