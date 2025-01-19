@@ -362,6 +362,16 @@ finally {
 }
 ```
 
+### Exceptions
+
+- `SUM_OF` - Arithmetic exceptions.
+- `SUB_OF` - Arithmetic exceptions.
+- `MUL_OF` - Arithmetic exceptions.
+- `DIV_OF` - Arithmetic exceptions.
+
+- `GUARD` - Null pointer exceptions.
+- `BOUNDS` - Array out of bounds exceptions.
+
 ---
 
 ## Inline Assembly
