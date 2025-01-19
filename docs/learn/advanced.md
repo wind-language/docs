@@ -8,6 +8,7 @@ Welcome to the Wind advanced examples! Here you'll find a collection of advanced
 
 - [Memory Management](#memory-management)
 - [Pointers and References](#pointers-and-references)
+- [Error Handling](#error-handling)
 
 ---
 
@@ -76,3 +77,43 @@ func main(): int {
 - `malloc(32*900000000)`:
 
     _Null pointers? Not here! The `guard![]` directive will check for null pointers and prevent dereferencing._
+
+## Error Handling
+
+Here's an example of how you can use error handling in Wind to create robust and reliable code.
+
+```wind
+@include[
+    "#libc.wi"
+]
+
+func main(argc: int, argv: ptr<ptr<char>>): int {
+    var T: s16=30_000;
+    var i: s16=0;
+
+    loop [true] {
+        printf("Enter a number to sum to %d within 16 bits: ", T);
+        scanf("%hu", &i);
+        try {
+            T += i;
+        }
+        [SUM_OF] -> {
+            printf("Sum overflowed 16 bits\n");
+        }
+        finally {
+            continue;
+        }
+        break;
+    }
+    printf("Sum: %d\n", T);
+
+    return 0;
+}
+```
+
+### Protection breakdown
+
+- `T += i`:
+
+    There could be an overflow here, but it will be caught by default. While `[SUM_OF]` will set the handler code only for the code inside the `try` block.
+    In absence of a try-catch the program would have called the default runtime handler for arithmetic exceptions.

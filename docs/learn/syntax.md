@@ -175,15 +175,15 @@ unsigned byte = unsigned 8 bits
 
 But the "#types.wi" std file provides some more types:
 ```c
-int8 = signed 8 bits
-int16 = signed 16 bits
-int32 = signed 32 bits
-int64 = signed 64 bits
+s8 = signed 8 bits
+s16 = signed 16 bits
+s32 = signed 32 bits
+s64 = signed 64 bits
 
-uint8 = unsigned 8 bits
-uint16 = unsigned 16 bits
-uint32 = unsigned 32 bits
-uint64 = unsigned 64 bits
+u8 = unsigned 8 bits
+s16 = unsigned 16 bits
+s32 = unsigned 32 bits
+s64 = unsigned 64 bits
 
 bool = 8 bits
 char = 8 bits
@@ -335,6 +335,30 @@ The `break` keyword is used to exit a loop.
 loop [x < 10] {
    x++;
    break;
+}
+```
+
+---
+
+## Try Catch
+
+Wind has a try-catch implementation for error handling.
+This is a simple implementation and is not as powerful as other languages.
+In fact it's just a wrapper to set the handler code for arithmetic exceptions and other security features like `guard![]`.
+
+```wind
+try {
+   T += 20_000; // sum overflow
+   T = guard![Null];
+}
+[SUM_OF] -> {
+   printf("Sum overflow handled\n");
+}
+[GUARD] -> {
+   printf("Null pointer exception handled\n");
+}
+finally {
+   printf("Exceptions handled\n");
 }
 ```
 
