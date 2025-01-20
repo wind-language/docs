@@ -33,6 +33,10 @@ Wind is a powerful, lightweight, and efficient programming language designed to 
 
 ## Getting Started
 
+### Check out the VSCode Extension
+
+Wind has a [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=WindLang.wind-lang) that provides syntax highlighting and code snippets to help you write Wind code more efficiently.
+
 To get started with Wind, follow these steps:
 
 1. **Install the Compiler**: [Installation Guide](./learn/install.md)
