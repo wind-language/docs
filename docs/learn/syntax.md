@@ -215,12 +215,11 @@ var my_ptr: ptr<char> = guard![malloc(32)];
 
 ### Casting
 
-Casting in Wind is done with the directive `cast<>()`
-(Will be replaced with `as` in the future)
+Casting in Wind is done with the `::` operator.
 
 ```wind
-var x: ptr<uint64> = malloc(...);
-cast<ptr<char>>(x)[0]='x';
+var x: ptr<u64> = malloc(...);
+(x :: ptr<char>)[0]='x';
 ```
 
 ---
