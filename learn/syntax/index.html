@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+    
+    <meta name="description" content="Wind, designed for safety, simplicity, and performance."> 
+    
+    <meta name="author" content="utcq"> 
+    
+    <link rel="canonical" href="https://doc.wind-lang.me/learn/syntax/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Syntax - Wind Programming Language</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- gruvbox_dark color palette -->
+<link href="../../css/palettes/gruvbox_dark.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://doc.wind-lang.me/" class="no-style">Wind Programming Language</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../quick/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Getting Started</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="./" class="menu-item active" property="item" typeof="WebPage">
+                        <span property="name">Syntax</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../about/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">About</span>
+                    </a>
+                    <meta property="position" content="3">
+                </li>
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="4">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../quick/">Getting Started</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        <span class="
+
+    terminal-mkdocs-side-nav-item--active">Syntax</span>
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../about/">About</a>
+        
+    
+    
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#wind-syntax-reference">Wind syntax reference</a></li>
+        <li><a href="#comments">Comments</a></li><li><a href="#directives">@ Directives</a></li>
+        <li><a href="#include">include</a></li><li><a href="#import">import</a></li><li><a href="#pure">pure</a></li><li><a href="#extern">extern</a></li><li><a href="#pub">pub</a></li><li><a href="#type">type</a></li><li><a href="#linkflag">linkflag</a></li><li><a href="#keywords">Keywords</a></li><li><a href="#data-types">Data Types</a></li><li><a href="#variables">Variables</a></li><li><a href="#global-variables">Global Variables</a></li><li><a href="#functions">Functions</a></li><li><a href="#namespaces">Namespaces</a></li><li><a href="#control-flow">Control Flow</a></li><li><a href="#try-catch">Try Catch</a></li><li><a href="#inline-assembly">Inline Assembly</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="wind-syntax-reference">Wind syntax reference</h1>
+<p>Welcome to the Wind Language Syntax Reference! This page will guide you through the syntax of the Wind programming language, including its keywords, operators, and conventions.</p>
+<hr />
+<h2 id="comments">Comments</h2>
+<p>Comments in Wind are similar to C-style comments and can be single-line or multi-line.</p>
+<pre><code class="language-wind">// This is a single-line comment
+/* This is a
+   multi-line comment */
+</code></pre>
+<hr />
+<h1 id="directives">@ Directives</h1>
+<p>Let's break the ice with the <code>@</code> directives. These are used to include files, define flags, and more.</p>
+<hr />
+<h3 id="include">include</h3>
+<p>The <code>include</code> directive is used to include a file in the current file. The file path is relative to the current file.</p>
+<pre><code class="language-wind">@include &quot;path/to/file.w&quot;
+</code></pre>
+<p>Using # as the first character of the file path will include a file from the standard library.</p>
+<pre><code class="language-wind">@include &quot;#types.wi&quot;
+</code></pre>
+<p>Multi include is also supported.</p>
+<pre><code class="language-wind">@include [
+   &quot;path/to/file1.w&quot;
+   &quot;path/to/file2.w&quot;
+]
+</code></pre>
+<hr />
+<h3 id="import">import</h3>
+<p>Pay attention to the <code>import</code> directive.</p>
+<pre><code class="language-wind">@import &quot;#my_module&quot;
+</code></pre>
+<p>You can use # prefix here as well to include a module from the <code>WIND_PKGS_PATH</code>.
+Import searches for a dir like this:</p>
+<pre><code class="language-yml">name/
+   name.wi
+   name.w
+</code></pre>
+<p>The <code>name.wi</code> file is the interface file, and the <code>name.w</code> file is the implementation file.
+The interface file should contain the function prototypes, and the implementation file should contain the function definitions.</p>
+<p>Interface file example:</p>
+<pre><code class="language-wind">func test_fn(x: int): int;
+</code></pre>
+<p>Implementation file example:</p>
+<pre><code class="language-wind">func test_fn(x: int): int {
+   return x*(x+1);
+}
+</code></pre>
+<hr />
+<h3 id="pure">pure</h3>
+<p>The <code>pure</code> directive is used to define a function flag.</p>
+<pre><code class="language-wind">@pure[stack expr] func foo() {}
+</code></pre>
+<ul>
+<li><code>stack</code> - Local variables usage won't be optimized.</li>
+<li><code>expr</code> - Expressions aren't optimized.</li>
+<li><code>logue</code> - No prologue and epilogue will be generated.</li>
+<li><code>stchk</code> - No check for stack overflow and integer overflow will be generated.</li>
+</ul>
+<hr />
+<h3 id="extern">extern</h3>
+<p>The <code>extern</code> directive is used to define a function as an external function.</p>
+<pre><code class="language-wind">@extern func foo();
+</code></pre>
+<hr />
+<h3 id="pub">pub</h3>
+<p>The <code>pub</code> directive is used to define a function as public.
+While public directive is not required for including functions, it is used to share functions between objects when linking.</p>
+<pre><code class="language-wind">@pub func foo() {}
+</code></pre>
+<hr />
+<h3 id="type">type</h3>
+<p>The <code>type</code> directive is used to define a type.</p>
+<pre><code class="language-wind">@type my_type = unsigned byte;
+</code></pre>
+<hr />
+<h3 id="linkflag">linkflag</h3>
+<p>The <code>linkflag</code> directive is used to define an ld flag.</p>
+<pre><code class="language-wind">@linkflag(&quot;-lm);
+</code></pre>
+<hr />
+<h2 id="keywords">Keywords</h2>
+<p>Wind has no concept of reserved-identifiers, so you can use any keyword as an identifier if you wish. However, the following keywords are used in the language and should be avoided as identifiers:</p>
+<pre><code class="language-rs">func
+var
+global
+return
+branch
+else
+loop
+continue
+break
+asm
+true
+false
+Null
+</code></pre>
+<hr />
+<h2 id="data-types">Data Types</h2>
+<p>Wind has some primitive data types:</p>
+<pre><code class="language-c">byte = signed 8 bits
+short = signed 16 bits
+int = signed 32 bits
+long = signed 64 bits
+
+unsigned byte = unsigned 8 bits
+...
+</code></pre>
+<p>But the "#types.wi" std file provides some more types:</p>
+<pre><code class="language-c">s8 = signed 8 bits
+s16 = signed 16 bits
+s32 = signed 32 bits
+s64 = signed 64 bits
+
+u8 = unsigned 8 bits
+s16 = unsigned 16 bits
+s32 = unsigned 32 bits
+s64 = unsigned 64 bits
+
+bool = 8 bits
+char = 8 bits
+</code></pre>
+<p>Arrays are declared using the following syntax:</p>
+<pre><code class="language-wind">var arr: [int; 10];
+</code></pre>
+<h3 id="pointers">Pointers</h3>
+<p>Pointers are declared using the following syntax:</p>
+<pre><code class="language-wind">var ptr: ptr&lt;int&gt;;
+</code></pre>
+<p>Wind convention is to use heap allocation over stack allocated arrays.</p>
+<p>with the <code>guard![]</code> directive, you can check for null pointers and prevent dereferencing.</p>
+<pre><code class="language-wind">var my_ptr: ptr&lt;char&gt; = guard![malloc(32)];
+</code></pre>
+<hr />
+<h3 id="casting">Casting</h3>
+<p>Casting in Wind is done with the <code>as</code> operator.</p>
+<pre><code class="language-wind">var x: ptr&lt;u64&gt; = malloc(...);
+(x as ptr&lt;char&gt;)[0]='x';
+</code></pre>
+<hr />
+<h3 id="sizeof">Sizeof</h3>
+<p>The <code>sizeof&lt;&gt;</code> directive is used to get the (move) size of a type.</p>
+<pre><code class="language-wind">var size_int: int = sizeof&lt;int&gt;;
+</code></pre>
+<hr />
+<h2 id="variables">Variables</h2>
+<p>Variables in Wind are declared using the <code>var</code> keyword, followed by the variable name and type.</p>
+<pre><code class="language-wind">var x: int = 10;
+</code></pre>
+<p>You can declared them in bulk as well.</p>
+<pre><code class="language-wind">var [x,y,z]: int = 0;
+</code></pre>
+<hr />
+<h2 id="global-variables">Global Variables</h2>
+<p>Global variables are declared using the <code>global</code> keyword.</p>
+<pre><code class="language-wind">global x: int = 10;
+</code></pre>
+<p>Non declarable in bulk.</p>
+<hr />
+<h2 id="functions">Functions</h2>
+<p>Functions in Wind are declared using the <code>func</code> keyword, followed by the function name, parameters, and return type.</p>
+<pre><code class="language-wind">func add(x: int, y: int): int {
+   return x + y;
+}
+</code></pre>
+<p>There's no wrapper for variadic functions, but you can still use <code>...</code> for external C functions.</p>
+<pre><code class="language-wind">@extern func printf(format: string, ...): int;
+</code></pre>
+<hr />
+<h2 id="namespaces">Namespaces</h2>
+<p>Namespaces in Wind are declared using the <code>namespace</code> keyword.</p>
+<pre><code class="language-wind">namespace my_namespace {
+   func foo() {
+      puts(&quot;Hello, World!&quot;);
+   }
+}
+</code></pre>
+<p>Used with the <code>::</code> operator.</p>
+<pre><code class="language-wind">my_namespace::foo();
+</code></pre>
+<hr />
+<h2 id="control-flow">Control Flow</h2>
+<p>Wind has the usual control flow features with unique syntax.</p>
+<h3 id="branch">Branch</h3>
+<p>The <code>branch</code> keyword is used to define a conditional statement.</p>
+<pre><code class="language-wind">branch [
+   x == 0: puts(&quot;x is zero&quot;);
+   else: {
+      puts(&quot;x != 0);
+      return 1;
+   }
+]
+</code></pre>
+<hr />
+<h3 id="loop">Loop</h3>
+<p>The <code>loop</code> keyword is used to define a loop statement.</p>
+<pre><code class="language-wind">loop [x &lt; 10] {
+   puts(&quot;x is less than 10&quot;);
+   x++;
+}
+</code></pre>
+<p>There's no <code>for</code> loop in Wind, but you can use the <code>loop</code> keyword with a counter.</p>
+<hr />
+<h3 id="continue">Continue</h3>
+<p>The <code>continue</code> keyword is used to skip the current iteration of a loop.</p>
+<pre><code class="language-wind">loop [x &lt; 10] {
+   x++;
+   continue;
+}
+</code></pre>
+<h3 id="break">Break</h3>
+<p>The <code>break</code> keyword is used to exit a loop.</p>
+<pre><code class="language-wind">loop [x &lt; 10] {
+   x++;
+   break;
+}
+</code></pre>
+<hr />
+<h2 id="try-catch">Try Catch</h2>
+<p>Wind has a try-catch implementation for error handling.
+This is a simple implementation and is not as powerful as other languages.
+In fact it's just a wrapper to set the handler code for arithmetic exceptions and other security features like <code>guard![]</code>.</p>
+<pre><code class="language-wind">try {
+   T += 20_000; // sum overflow
+   T = guard![Null];
+}
+[SUM_OF] -&gt; {
+   printf(&quot;Sum overflow handled\n&quot;);
+}
+[GUARD] -&gt; {
+   printf(&quot;Null pointer exception handled\n&quot;);
+}
+finally {
+   printf(&quot;Exceptions handled\n&quot;);
+}
+</code></pre>
+<h3 id="exceptions">Exceptions</h3>
+<ul>
+<li><code>SUM_OF</code> - Arithmetic exceptions.</li>
+<li><code>SUB_OF</code> - Arithmetic exceptions.</li>
+<li><code>MUL_OF</code> - Arithmetic exceptions.</li>
+<li>
+<p><code>DIV_OF</code> - Arithmetic exceptions.</p>
+</li>
+<li>
+<p><code>GUARD</code> - Null pointer exceptions.</p>
+</li>
+<li><code>BOUNDS</code> - Array out of bounds exceptions.</li>
+</ul>
+<hr />
+<h2 id="inline-assembly">Inline Assembly</h2>
+<p>Wind supports inline assembly using the <code>asm</code> keyword.</p>
+<pre><code class="language-wind">asm {
+   mov eax, 10;
+   add eax, 20;
+}
+</code></pre>
+<p>You can also reference local variables in inline assembly.</p>
+<pre><code class="language-wind">asm {
+   mov eax, ?x;
+   add eax, 0x10;
+}
+</code></pre>
+<hr />
+<p>Happy coding with Wind! 🎉</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>
