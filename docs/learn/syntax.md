@@ -215,11 +215,11 @@ var my_ptr: ptr<char> = guard![malloc(32)];
 
 ### Casting
 
-Casting in Wind is done with the `::` operator.
+Casting in Wind is done with the `as` operator.
 
 ```wind
 var x: ptr<u64> = malloc(...);
-(x :: ptr<char>)[0]='x';
+(x as ptr<char>)[0]='x';
 ```
 
 ---
@@ -276,6 +276,26 @@ There's no wrapper for variadic functions, but you can still use `...` for exter
 
 ```wind
 @extern func printf(format: string, ...): int;
+```
+
+---
+
+## Namespaces
+
+Namespaces in Wind are declared using the `namespace` keyword.
+
+```wind
+namespace my_namespace {
+   func foo() {
+      puts("Hello, World!");
+   }
+}
+```
+
+Used with the `::` operator.
+
+```wind
+my_namespace::foo();
 ```
 
 ---
